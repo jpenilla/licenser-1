@@ -4,14 +4,14 @@ plugins {
 
     id 'com.gradle.plugin-publish' version '0.14.0'
 
-    id 'org.cadixdev.licenser' version '0.5.1'
+    id 'org.cadixdev.licenser' version '0.6.1'
 }
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-group = 'org.cadixdev.gradle'
-version = '0.6.1'
+group = 'net.kyori'
+version = '0.6.2-SNAPSHOT'
 description = 'A simple license header manager for Gradle'
 
 repositories {
@@ -72,21 +72,21 @@ task groovydocJar(type: Jar, dependsOn: groovydoc) {
 gradlePlugin {
     plugins {
         licenserPlugin {
-            id = 'org.cadixdev.licenser'
+            id = 'net.kyori.licenser'
             implementationClass = 'org.cadixdev.gradle.licenser.Licenser'
         }
     }
 }
 
 pluginBundle {
-    website = 'https://www.cadixdev.org/'
-    vcsUrl = 'https://github.com/CadixDev/licenser'
+    website = 'https://github.com/KyoriPowered/licenser'
+    vcsUrl = 'https://github.com/KyoriPowered/licenser'
     description = project.description
     tags = ['license']
 
     plugins {
         licenserPlugin {
-            id = 'org.cadixdev.licenser'
+            id = 'net.kyori.licenser'
             displayName = 'licenser'
         }
     }
