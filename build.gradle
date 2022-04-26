@@ -73,7 +73,7 @@ gradlePlugin {
     plugins {
         licenserPlugin {
             id = 'net.kyori.licenser'
-            implementationClass = 'org.cadixdev.gradle.licenser.Licenser'
+            implementationClass = 'net.kyori.licenser.Licenser'
         }
     }
 }
